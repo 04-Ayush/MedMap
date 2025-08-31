@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export function Navbar() {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+    <nav className="fixed bottom-0 left-0 right-0 bg-transparent ">
       <div className="max-w-md mx-auto flex justify-around py-2">
         <NavLink
           to="/dashboard"

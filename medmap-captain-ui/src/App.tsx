@@ -20,26 +20,28 @@ export default function App() {
   return (
     <AuthProvider>
       <RideProvider>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route
-            path="/dashboard"
-            element={<PrivateRoute><DashboardPage /></PrivateRoute>}
-          />
-          <Route
-            path="/user"
-            element={<PrivateRoute><UserDetailsPage /></PrivateRoute>}
-          />
-          <Route
-            path="/hospital"
-            element={<PrivateRoute><HospitalDestinationPage /></PrivateRoute>}
-          />
-          <Route
-            path="/profile"
-            element={<PrivateRoute><ProfilePage /></PrivateRoute>}
-          />
-          <Route path="*" element={<Navigate to="/login" replace />} />
-        </Routes>
+        <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route
+              path="/dashboard"
+              element={<PrivateRoute><DashboardPage /></PrivateRoute>}
+            />
+            <Route
+              path="/user"
+              element={<PrivateRoute><UserDetailsPage /></PrivateRoute>}
+            />
+            <Route
+              path="/hospital"
+              element={<PrivateRoute><HospitalDestinationPage /></PrivateRoute>}
+            />
+            <Route
+              path="/profile"
+              element={<PrivateRoute><ProfilePage /></PrivateRoute>}
+            />
+            <Route path="*" element={<Navigate to="/login" replace />} />
+          </Routes>
+        </div>
       </RideProvider>
     </AuthProvider>
   )
